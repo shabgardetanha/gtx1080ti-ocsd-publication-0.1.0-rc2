@@ -1,0 +1,10 @@
+Release candidate: 0.1.0-rc2
+Build environment: local package authoring workspace; no live hardware access
+Python compile: PASS
+Unit tests: 26/26 PASS
+Static candidate verifier: PASS
+systemd-analyze verify: PASS
+Host OCSD/Redfish/GPU integration during package build: NOT RUN
+Host service modified by package build: NO
+Host OCSD memory modified by package build: NO
+Host iLO settings modified by package build: NO

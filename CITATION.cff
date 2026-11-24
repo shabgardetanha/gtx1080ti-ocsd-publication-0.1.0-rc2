@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "Cite this experimental project as an implementation derived from the host-collected source. Do not imply production qualification."
+title: "GTX 1080 Ti to HPE DL380 Gen9 iLO 4 via OCSD"
+version: "0.1.0-rc2"
+date-released: "2026-11-24"
+license: MIT
+repository-code: "https://github.com/oceanmedianow/gen9-t4-ocsd-thermal-bridge"
+abstract: >-
+  Experimental host-side publisher for forwarding NVIDIA GPU temperature into
+  a HPE Gen9 OCSD option-card record. Qualified only on one HPE DL380 Gen9,
+  iLO 4 2.77, GTX 1080 Ti Founders Edition, and standard fans. Fan-control
+  causality and production readiness are not yet verified.
+keywords:
+  - HPE
+  - iLO 4
+  - OCSD
+  - Proxmox
+  - NVIDIA
+  - GTX 1080 Ti

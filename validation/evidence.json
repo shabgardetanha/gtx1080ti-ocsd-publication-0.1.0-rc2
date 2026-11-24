@@ -1,0 +1,145 @@
+{
+  "project": "GTX 1080 Ti to HPE DL380 Gen9 iLO 4 via OCSD",
+  "candidate_version": "0.1.0-rc2",
+  "captured_date": "2026-11-23",
+  "hardware": {
+    "server": "HPE ProLiant DL380 Gen9",
+    "ilo_firmware": "2.77",
+    "system_rom": "P89",
+    "bios_revision": "2.76",
+    "gpu": "NVIDIA GeForce GTX 1080 Ti Founders Edition",
+    "gpu_bdf": "0000:0b:00.0",
+    "proxmox": "9.2.2",
+    "kernel": "7.0.2-6-pve"
+  },
+  "ocsd": {
+    "allocation_address_observed": "0x791f4000",
+    "allocation_size_bytes": 16384,
+    "record_size_bytes": 160,
+    "initial_device_count": 2,
+    "published_device_count": 3,
+    "third_record_valid_in_5_samples": true,
+    "counter_first": 2030,
+    "counter_last": 2051
+  },
+  "paired_samples": [
+    {
+      "sample": 1,
+      "gpu_c": 49,
+      "gpu_util_pct": 0,
+      "ocsd_c": 48,
+      "ocsd_counter": 2030,
+      "ilo_pci2_c": 64
+    },
+    {
+      "sample": 2,
+      "gpu_c": 49,
+      "gpu_util_pct": 0,
+      "ocsd_c": 48,
+      "ocsd_counter": 2035,
+      "ilo_pci2_c": 63
+    },
+    {
+      "sample": 3,
+      "gpu_c": 48,
+      "gpu_util_pct": 0,
+      "ocsd_c": 49,
+      "ocsd_counter": 2040,
+      "ilo_pci2_c": 64
+    },
+    {
+      "sample": 4,
+      "gpu_c": 49,
+      "gpu_util_pct": 0,
+      "ocsd_c": 49,
+      "ocsd_counter": 2046,
+      "ilo_pci2_c": 63
+    },
+    {
+      "sample": 5,
+      "gpu_c": 48,
+      "gpu_util_pct": 0,
+      "ocsd_c": 48,
+      "ocsd_counter": 2051,
+      "ilo_pci2_c": 64
+    }
+  ],
+  "derived": {
+    "mean_gpu_c": 48.6,
+    "mean_ocsd_c": 48.4,
+    "mean_ilo_pci2_c": 63.6,
+    "mean_ilo_minus_gpu_c": 15.0,
+    "observed_ilo_minus_gpu_range_c": [
+      14,
+      16
+    ]
+  },
+  "sensor_states_after_ilo_reset": {
+    "21-PCI 1": "Absent",
+    "22-PCI 2": "Enabled/OK",
+    "23-PCI 3": "Absent",
+    "31-PCI 1 Zone": "Enabled",
+    "32-PCI 2 Zone": "Enabled",
+    "33-PCI 3 Zone": "Enabled"
+  },
+  "fan_monitor": {
+    "samples_supplied": 23,
+    "gpu_temperature_range_c": [
+      48,
+      49
+    ],
+    "ilo_pci2_temperature_range_c": [
+      63,
+      64
+    ],
+    "pci2_zone_temperature_range_c": [
+      35,
+      36
+    ],
+    "peak_observed_fans_percent": {
+      "Fan 1": 16,
+      "Fan 2": 16,
+      "Fan 3": 23,
+      "Fan 4": 65,
+      "Fan 5": 82,
+      "Fan 6": 65
+    },
+    "final_observed_fans_percent": {
+      "Fan 1": 9,
+      "Fan 2": 9,
+      "Fan 3": 21,
+      "Fan 4": 26,
+      "Fan 5": 27,
+      "Fan 6": 27
+    },
+    "gpu_causal_fan_response_verified": false
+  },
+  "tests": {
+    "legacy_staging_unit_tests_passed": 32,
+    "legacy_tests_run_before_final_host_patch": true,
+    "rc2_publisher_unit_tests_passed": 23,
+    "rc2_packaging_tests_passed": 3,
+    "rc2_total_tests_passed": 26,
+    "rc2_tests_run_against_cleaned_release_source": true,
+    "rc2_python_compile": "PASS",
+    "rc2_static_candidate_verifier": "PASS",
+    "rc2_systemd_analyze_verify": "PASS",
+    "rc2_live_hardware_test": "NOT RUN",
+    "rc2_host_service_changed": "NO",
+    "rc2_ocsd_memory_changed": "NO",
+    "rc2_ilo_settings_changed": "NO",
+    "rc2_workload_or_container_operations": "NONE"
+  },
+  "release_status": "EXPERIMENTAL_RC2_NOT_PRODUCTION_APPROVED",
+  "publication_source": {
+    "host_baseline_sha256": "a92e6f87ab6037e76d4ba0f0e850bf0e422e9600b7dfddda602e8b2ab0b5178f",
+    "cleaned_rc2_sha256": "f6990a761e01ea95e3db51cd42cd6b0db980efe6a1807ad5a2239c8737ada940",
+    "host_was_modified_by_package_build": false,
+    "cleanup_summary": "Removed obsolete no-op workload functions/configuration and unused thresholds/offset constants; renamed T4-specific runtime wording; simplified record publication."
+  },
+  "validation_artifacts": {
+    "paired_samples_csv": "validation/paired_samples_5.csv",
+    "fan_response_csv": "validation/fan_response_23_samples.csv",
+    "full_fan_trace_causality_proven": false
+  }
+}

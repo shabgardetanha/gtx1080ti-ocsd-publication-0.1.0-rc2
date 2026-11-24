@@ -1,0 +1,7 @@
+Package build/test environment:
+Python: 3.13.5
+systemd: 257 (257.9-1~deb13u1)
+Python standard-library tests: 26/26 PASS
+systemd-analyze verify: PASS
+
+No live Proxmox host, GPU, iLO, /dev/mem, IPMI device, container, VM, or workload was accessed by the package build.

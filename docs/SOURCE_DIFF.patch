@@ -1,0 +1,148 @@
+--- a/src/gen9_t4_ocsd.py
++++ b/src/gen9_t4_ocsd.py
+@@ -5,7 +5,7 @@
+ # Author: Josh Murphy
+ # Company: Ocean Media Now (https://www.oceanmedianow.com)
+ # Architecture: NVIDIA telemetry -> OCSD -> stock iLO 4 -> HPE fan control.
+-"""Publish the Gen9 T4 temperature through the firmware OCSD option-card slot."""
++"""Publish NVIDIA GPU temperature through a Gen9 OCSD option-card record."""
+ 
+ import fcntl
+ import json
+@@ -21,24 +21,20 @@
+ import time
+ 
+ 
+-LOG = logging.getLogger("gen9-t4-ocsd")
++LOG = logging.getLogger("gen9-gpu-ocsd")
+ STATE = Path("/var/lib/gen9-t4-ocsd/ownership.json")
+ LOCK = "/run/gen9-t4-ocsd/publisher.lock"
+ DMI_ENTRIES = Path("/sys/firmware/dmi/entries")
+ EXPECTED_PRODUCT = "ProLiant DL380 Gen9"
+ GPU_PCI = "00000000:0B:00.0"
+ BUS, DEVICE = 11, 0
+-ILO_SENSOR_NAME = "22-PCI 2"  # candidate sensor for physical Slot 2
+-ILO_TEMP_OFFSET_C = int(os.environ.get("OCSD_ILO_TEMP_OFFSET_C", "15"))  # provisional; T4-derived, not qualified for this GPU
+-ILO_TEMP_TOLERANCE_C = int(os.environ.get("OCSD_ILO_TEMP_TOLERANCE_C", "6"))
++ILO_SENSOR_NAME = "22-PCI 2"  # sensor observed on the qualification host
+ RECORD_SIZE = 160
+ RECORD_OFFSET = 64 + 2 * RECORD_SIZE
+ CAUTION_C = 85
+ CONTINUOUS_C = 75
+-STOP_WORKLOAD_C = 82
+ RESTORE_COOL_C = 55
+ RESTORE_TIMEOUT_SECONDS = 90
+-WORKLOAD_UNITS = tuple(os.environ.get("OCSD_WORKLOAD_UNITS", "").split())
+ STOP = False
+ 
+ 
+@@ -178,42 +174,16 @@
+         channel.close()
+ 
+ 
+-def stop_workloads():
+-    LOG.warning("GPU workload management is disabled.")
+-    return False
+-
+-def workloads_active():
+-    return False
+-
+-def validate_workload_units():
+-    return None
+-
+-def request_thermal_stop(temperature, telemetry_failed, warning_active):
+-    warning = telemetry_failed or (
+-        temperature is not None and temperature >= STOP_WORKLOAD_C
+-    )
+-    if warning and not warning_active:
+-        LOG.warning(
+-            "GPU thermal caution at %s C; no workload will be stopped",
+-            temperature
+-        )
+-    return warning
+-
+-def publish_and_guard(memory, active_header, counter, temperature,
+-                      telemetry_failed, warning_active):
++def publish_record(memory, active_header, counter, temperature):
++    """Publish one validated record update; never manage external processes."""
+     counter = (counter + 1) & 0xffff
+     next_record = make_record(temperature, counter)
+-    try:
+-        memory[RECORD_OFFSET:RECORD_OFFSET + RECORD_SIZE] = next_record
+-        if bytes(memory[RECORD_OFFSET:RECORD_OFFSET + RECORD_SIZE]) != next_record:
+-            raise RuntimeError("OCSD live update readback failed")
+-        if bytes(memory[:64]) != active_header:
+-            raise RuntimeError("OCSD header changed during publication")
+-    except Exception:
+-        raise
+-    warning_active = request_thermal_stop(
+-        temperature, telemetry_failed, warning_active)
+-    return counter, warning_active
++    memory[RECORD_OFFSET:RECORD_OFFSET + RECORD_SIZE] = next_record
++    if bytes(memory[RECORD_OFFSET:RECORD_OFFSET + RECORD_SIZE]) != next_record:
++        raise RuntimeError("OCSD live update readback failed")
++    if bytes(memory[:64]) != active_header:
++        raise RuntimeError("OCSD header changed during publication")
++    return counter
+ 
+ 
+ def boot_id():
+@@ -266,13 +236,11 @@
+     else:
+         raise ValueError("OCSD slot 2 is not empty or safely recoverable")
+     counter = (counter + 1) & 0xffff
+-    telemetry_failed = False
+     try:
+         temperature = gpu_temperature()
+     except Exception as error:
+-        LOG.error("initial NVIDIA telemetry failed: %s", type(error).__name__)
++        LOG.error("initial NVIDIA telemetry failed; publishing fail-high value: %s", type(error).__name__)
+         temperature = CAUTION_C
+-        telemetry_failed = True
+     active_header = header_with_count(original, 3)
+     try:
+         new_record = make_record(temperature, counter)
+@@ -289,7 +257,6 @@
+             memory[RECORD_OFFSET:RECORD_OFFSET + RECORD_SIZE] = bytes(RECORD_SIZE)
+             STATE.unlink()
+         raise
+-    request_thermal_stop(temperature, telemetry_failed, False)
+     return original, active_header, counter
+ 
+ 
+@@ -344,26 +311,21 @@
+         memory = mmap.mmap(fd, 0x4000, flags=mmap.MAP_SHARED,
+                            prot=mmap.PROT_READ | mmap.PROT_WRITE, offset=address)
+         original, active_header, counter = claim(memory, address)
+-        LOG.info("T4 sensor published at OCSD record 2, physical 0x%x", address)
++        LOG.info("GPU sensor published at OCSD record slot 2, physical 0x%x", address)
+         notify("READY=1\nSTATUS=GPU temperature published to OCSD; iLO correlation unverified")
+         ready_count = 0
+         misses = 0
+         ready = False
+         last_ilo_check = 0
+         last_temp = None
+-        warning_active = False
+         while not STOP:
+             started = time.monotonic()
+             try:
+                 temperature = gpu_temperature()
+-                telemetry_failed = False
+             except Exception as error:
+                 temperature = CAUTION_C
+-                telemetry_failed = True
+                 LOG.error("NVIDIA telemetry failed; publishing 85 C: %s", type(error).__name__)
+-            counter, warning_active = publish_and_guard(
+-                memory, active_header, counter, temperature,
+-                telemetry_failed, warning_active)
++            counter = publish_record(memory, active_header, counter, temperature)
+             now = time.monotonic()
+             if now - last_ilo_check >= 5:
+                 last_ilo_check = now
+@@ -416,5 +378,5 @@
+     try:
+         run()
+     except Exception:
+-        LOG.exception("OCSD T4 publisher stopped")
++        LOG.exception("GPU OCSD publisher stopped")
+         raise SystemExit(1)

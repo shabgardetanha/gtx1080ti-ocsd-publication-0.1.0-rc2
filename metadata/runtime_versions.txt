@@ -1,0 +1,9 @@
+Host capture (from the user-supplied Proxmox export transcript):
+captured_utc=2026-11-23T15:24:13Z
+python=Python 3.13.5
+kernel=7.0.2-6-pve
+proxmox=pve-manager/9.2.2/b9984c6d90a4bd80
+nvidia_smi=NVIDIA-SMI version 580.196.07
+publisher_service=active at capture time
+
+Note: the host-collected source was subsequently cleaned in the publication workspace; see docs/SOURCE_CHANGELOG.md.

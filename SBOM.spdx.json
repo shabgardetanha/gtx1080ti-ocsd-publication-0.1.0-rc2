@@ -1,0 +1,831 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "gtx1080ti-ocsd-publication-rc2",
+  "documentNamespace": "https://github.com/oceanmedianow/gen9-t4-ocsd-thermal-bridge/releases/tag/v0.1.0-rc2/sbom/f6990a761e01ea95e3db51cd42cd6b0db980efe6a1807ad5a2239c8737ada940",
+  "creationInfo": {
+    "creators": [
+      "Tool: scripts/generate_sbom.py"
+    ],
+    "created": "2026-11-24T00:00:00Z",
+    "comment": "Generated source-tree manifest. SBOM.spdx.json and SHA256SUMS are excluded from the file list to avoid recursive self-hashes; the release archive hash covers both. External runtime tools are not redistributed."
+  },
+  "packages": [
+    {
+      "name": "gtx1080ti-ocsd-publisher",
+      "SPDXID": "SPDXRef-Package-Publisher",
+      "versionInfo": "0.1.0-rc2",
+      "downloadLocation": "https://github.com/oceanmedianow/gen9-t4-ocsd-thermal-bridge",
+      "filesAnalyzed": true,
+      "licenseConcluded": "MIT",
+      "licenseDeclared": "MIT",
+      "copyrightText": "Copyright (c) 2026 Josh Murphy (Ocean Media Now)",
+      "summary": "Experimental NVIDIA GPU temperature publisher for HPE Gen9 OCSD"
+    }
+  ],
+  "files": [
+    {
+      "fileName": "./.github/workflows/ci.yml",
+      "SPDXID": "SPDXRef-File-b803fcb7f17ed923",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "7a8d9270e103f0f9b734a20ecd9e2c2f6c72dc957502ccfe5030e41d8b064f1a"
+        }
+      ],
+      "licenseConcluded": "MIT",
+      "licenseInfoInFiles": [
+        "MIT"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./.gitignore",
+      "SPDXID": "SPDXRef-File-bc37d034bad56458",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "8252d9c789fd66192dd3c3f1f32f781899c70dfddcbbd64c41539f1b9c5436ac"
+        }
+      ],
+      "licenseConcluded": "MIT",
+      "licenseInfoInFiles": [
+        "MIT"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./CHANGELOG.md",
+      "SPDXID": "SPDXRef-File-06572a96a58dc510",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "71c7b16d679be5e1d0411c16b9d550d11f54a06b9bb417c899b3b3085a942c5e"
+        }
+      ],
+      "licenseConcluded": "MIT",
+      "licenseInfoInFiles": [
+        "MIT"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./CITATION.cff",
+      "SPDXID": "SPDXRef-File-9b9f76394a441ff4",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "2eed360763c792c06288263c42f6f8eb3cbe6088f70a74a61e4006b543bc4ac3"
+        }
+      ],
+      "licenseConcluded": "MIT",
+      "licenseInfoInFiles": [
+        "MIT"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./CONTRIBUTING.md",
+      "SPDXID": "SPDXRef-File-eca12c0a30e25b4b",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "8dac524aab25ab34d5570ec7f0de663fc19ccbfac7707ada0bbabf76c64b623b"
+        }
+      ],
+      "licenseConcluded": "MIT",
+      "licenseInfoInFiles": [
+        "MIT"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./LICENSE",
+      "SPDXID": "SPDXRef-File-c693279643b8cd5d",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "ffa4a8f3e4ea70cf6e1f656fb45385db7906da76d77d88212ced8a0da2c1355c"
+        }
+      ],
+      "licenseConcluded": "MIT",
+      "licenseInfoInFiles": [
+        "MIT"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./Makefile",
+      "SPDXID": "SPDXRef-File-76ed074a9305c040",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "85709b377ce3007e96bc974ff9eeaad078f6153c7f5911e7bdb9416ef548ae86"
+        }
+      ],
+      "licenseConcluded": "MIT",
+      "licenseInfoInFiles": [
+        "MIT"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./PUBLISHING_NOTES.md",
+      "SPDXID": "SPDXRef-File-1f45bb3a082b2dfc",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "185dde7f0c5a8d36bd9d005b50cbc24d9be16ba96325469a0e57cb58f5b5f692"
+        }
+      ],
+      "licenseConcluded": "MIT",
+      "licenseInfoInFiles": [
+        "MIT"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./README.fa.md",
+      "SPDXID": "SPDXRef-File-d707f42f25d6ea90",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "29eba8c0119483a0f5f63fb4c033db5b16bc4edab37c1aa5490cefc85a40bf1b"
+        }
+      ],
+      "licenseConcluded": "MIT",
+      "licenseInfoInFiles": [
+        "MIT"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./README.md",
+      "SPDXID": "SPDXRef-File-b335630551682c19",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "f0fa7f6ee0437414221a5f2b589fb01f7db72691ad001249ed40e9960aa4246d"
+        }
+      ],
+      "licenseConcluded": "MIT",
+      "licenseInfoInFiles": [
+        "MIT"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./RELEASE_STATUS.md",
+      "SPDXID": "SPDXRef-File-047bb5db70d8332b",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "d13e023a820516412cb6c070516572131a15db5c7f58f659cfc998b4f20d636f"
+        }
+      ],
+      "licenseConcluded": "MIT",
+      "licenseInfoInFiles": [
+        "MIT"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./SECURITY.md",
+      "SPDXID": "SPDXRef-File-f6ed156e4bf5c791",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "6893a309f31b46c8be11ac97c01eb2be67885714251d1337010577bac3509b95"
+        }
+      ],
+      "licenseConcluded": "MIT",
+      "licenseInfoInFiles": [
+        "MIT"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./config/README.md",
+      "SPDXID": "SPDXRef-File-6e8c7fdec58c9cb5",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "a273e52807a67e7866f9549d52ed84b90f5f6815d774ad598339f02a05ad8808"
+        }
+      ],
+      "licenseConcluded": "MIT",
+      "licenseInfoInFiles": [
+        "MIT"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./docs/ARCHITECTURE.md",
+      "SPDXID": "SPDXRef-File-ff21b6b9a3a33e9d",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "1ad2ac4788c0a0b9753895fd505732174a382017c131bafdf2fc67c10b3da03f"
+        }
+      ],
+      "licenseConcluded": "MIT",
+      "licenseInfoInFiles": [
+        "MIT"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./docs/COMPATIBILITY_AND_LIMITATIONS.md",
+      "SPDXID": "SPDXRef-File-9b0de6495e11e0a1",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "764e7d0ef2662c6398dfe7b98d9f9f159733045d63de9f3a965e4d11e1092cb1"
+        }
+      ],
+      "licenseConcluded": "MIT",
+      "licenseInfoInFiles": [
+        "MIT"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./docs/DEPLOYMENT_AND_OPERATIONS.md",
+      "SPDXID": "SPDXRef-File-1c763d6aae3a026a",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "a1c6e08f5eeef16f1668aca917f16995f005883c80f3aa73b625a02a3835c70a"
+        }
+      ],
+      "licenseConcluded": "MIT",
+      "licenseInfoInFiles": [
+        "MIT"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./docs/INCIDENT_TIMELINE.md",
+      "SPDXID": "SPDXRef-File-63da683914e6c8d4",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "a5630146fc83818f456d84431bcb2b1ed2eeed0aa9fe71c6e8fc9434d6022ebe"
+        }
+      ],
+      "licenseConcluded": "MIT",
+      "licenseInfoInFiles": [
+        "MIT"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./docs/PROJECT_STATUS.md",
+      "SPDXID": "SPDXRef-File-68ef0aa444089c18",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "601b76f96e5a845ba031c5cebf19e6b25cb8536578b936f09faa1518a2c2b673"
+        }
+      ],
+      "licenseConcluded": "MIT",
+      "licenseInfoInFiles": [
+        "MIT"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./docs/REFERENCES.md",
+      "SPDXID": "SPDXRef-File-8d461432b25b3fd6",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "29d015cb6580927407008c79f668aefd59c0af7f6b06b5659e4ca66af25cf140"
+        }
+      ],
+      "licenseConcluded": "MIT",
+      "licenseInfoInFiles": [
+        "MIT"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./docs/RELEASE_GATES.md",
+      "SPDXID": "SPDXRef-File-244b82c24ddd9d5f",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "88ccd76dcc059132d869780ed7aabb48ad3c1fe92afe31024db8deed47f1414c"
+        }
+      ],
+      "licenseConcluded": "MIT",
+      "licenseInfoInFiles": [
+        "MIT"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./docs/SECURITY_AND_PRIVACY.md",
+      "SPDXID": "SPDXRef-File-887d4c034e6ac727",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "1140622a421867b1759737c7e2a83374ccc2cf770592e148722cd06e0e3b167d"
+        }
+      ],
+      "licenseConcluded": "MIT",
+      "licenseInfoInFiles": [
+        "MIT"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./docs/SOURCE_CHANGELOG.md",
+      "SPDXID": "SPDXRef-File-06ed538ee4b0847a",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "4a05435cee37c4ef996b99d05109c0d0a358de3a5904aab76397605b4531be9b"
+        }
+      ],
+      "licenseConcluded": "MIT",
+      "licenseInfoInFiles": [
+        "MIT"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./docs/SOURCE_DIFF.patch",
+      "SPDXID": "SPDXRef-File-e10dd1637f342ad7",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "1ade88b82e58c2205f5e4b25278a2b6847fdeacdd3fc40abc6381d69bee8cb45"
+        }
+      ],
+      "licenseConcluded": "MIT",
+      "licenseInfoInFiles": [
+        "MIT"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./docs/VALIDATION_RESULTS.md",
+      "SPDXID": "SPDXRef-File-a671c1703e10fed5",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "a116b13edd436f7d2a8bbef8ec47675f0e8305ce40f2c9ed6c9a49a6bd111988"
+        }
+      ],
+      "licenseConcluded": "MIT",
+      "licenseInfoInFiles": [
+        "MIT"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./legal/THIRD_PARTY_NOTICES.md",
+      "SPDXID": "SPDXRef-File-b21d888ced9f06dc",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "378486c82e7718b7e181b80a4315f2f7678649665f4ab20fe828790f3f0104d4"
+        }
+      ],
+      "licenseConcluded": "MIT",
+      "licenseInfoInFiles": [
+        "MIT"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./metadata/build_environment.txt",
+      "SPDXID": "SPDXRef-File-f8bbd5cffda72314",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "55ca39e9f0de72627fb0b2e1d4c1c4a5f2ed2d51141faf24c74ddb3a3f2dd5ff"
+        }
+      ],
+      "licenseConcluded": "MIT",
+      "licenseInfoInFiles": [
+        "MIT"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./metadata/release_verification.txt",
+      "SPDXID": "SPDXRef-File-2b667c44f5b9f604",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "1a201293db5673705accb4a0bca051597e0e3b0a8d309ee24f06e529cbf39b2b"
+        }
+      ],
+      "licenseConcluded": "MIT",
+      "licenseInfoInFiles": [
+        "MIT"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./metadata/runtime_versions.txt",
+      "SPDXID": "SPDXRef-File-e78acf009191062e",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "6c61658aade053b067749dc65693bf09812cefadc0a50a596b831a77a86f40a5"
+        }
+      ],
+      "licenseConcluded": "MIT",
+      "licenseInfoInFiles": [
+        "MIT"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./metadata/static_verification.txt",
+      "SPDXID": "SPDXRef-File-ba116f2bcfb79d24",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "c139a90ff4297fa675fcad605baf428e7a8980aa543a5edf7a4d13cb3e939025"
+        }
+      ],
+      "licenseConcluded": "MIT",
+      "licenseInfoInFiles": [
+        "MIT"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./scripts/build_release.sh",
+      "SPDXID": "SPDXRef-File-1b4b962d48628466",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "9887012015dddc2980c6810814682c7c9fddbff380c7a0c967d3c6b7d523f7f7"
+        }
+      ],
+      "licenseConcluded": "MIT",
+      "licenseInfoInFiles": [
+        "MIT"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./scripts/export_release_from_host.sh",
+      "SPDXID": "SPDXRef-File-cf4772b6a3d8d0bd",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "a48670c12f9d43e8d3edaf3272b99d6b211cfb01009670bd74e499ebde15a2f9"
+        }
+      ],
+      "licenseConcluded": "MIT",
+      "licenseInfoInFiles": [
+        "MIT"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./scripts/generate_sbom.py",
+      "SPDXID": "SPDXRef-File-8950219db3b6ee5b",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "a73110ab5c585040e15aae607842c68add0e61d44fab4b605dc427ceb093a584"
+        }
+      ],
+      "licenseConcluded": "MIT",
+      "licenseInfoInFiles": [
+        "MIT"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./scripts/verify_candidate.py",
+      "SPDXID": "SPDXRef-File-d72b7e8b422dad38",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "72fabc67afd3cfd4dc63502877a1d0b1210221209c6a3a07231eeeaecec15d59"
+        }
+      ],
+      "licenseConcluded": "MIT",
+      "licenseInfoInFiles": [
+        "MIT"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./src/gen9_t4_ocsd.py",
+      "SPDXID": "SPDXRef-File-bb7c9a09242c7f9d",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "f6990a761e01ea95e3db51cd42cd6b0db980efe6a1807ad5a2239c8737ada940"
+        }
+      ],
+      "licenseConcluded": "MIT",
+      "licenseInfoInFiles": [
+        "MIT"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./systemd/gen9-t4-ocsd.service",
+      "SPDXID": "SPDXRef-File-96131f88be4a0040",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "00a7da48361af4afc167c54a66767b4eb565e9e1d688fa71dbbc87d085e72c72"
+        }
+      ],
+      "licenseConcluded": "MIT",
+      "licenseInfoInFiles": [
+        "MIT"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./tests/test_packaging.py",
+      "SPDXID": "SPDXRef-File-696274777d5a9143",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "fa05f31a2ea0272aea8a37235ec57bbd65706c0de22be046d4950e486f18c6de"
+        }
+      ],
+      "licenseConcluded": "MIT",
+      "licenseInfoInFiles": [
+        "MIT"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./tests/test_publisher.py",
+      "SPDXID": "SPDXRef-File-e3258fc1bc5f6226",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "539a1b66ac5adaeb1cfe7da7608ba0d1e51c2e07d060f0935e9b580e4a888337"
+        }
+      ],
+      "licenseConcluded": "MIT",
+      "licenseInfoInFiles": [
+        "MIT"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./validation/evidence.json",
+      "SPDXID": "SPDXRef-File-5149f7731ecfad1f",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "b7a7f4b340e6020b7caf2b84cc001cb2eb91d390af744ee392ab1c7903496aee"
+        }
+      ],
+      "licenseConcluded": "MIT",
+      "licenseInfoInFiles": [
+        "MIT"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./validation/fan_response_23_samples.csv",
+      "SPDXID": "SPDXRef-File-a903a8966ee5525d",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "2b9c60353f692eb42246bb6bebb5d4a89db3edb1c1e9a5f894497ac412bb238d"
+        }
+      ],
+      "licenseConcluded": "MIT",
+      "licenseInfoInFiles": [
+        "MIT"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./validation/paired_samples_5.csv",
+      "SPDXID": "SPDXRef-File-983bede9100db4ef",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "c1efb648187143ab7540f6f87f7bbc068ed15e98537a402b16b4e30ebc179742"
+        }
+      ],
+      "licenseConcluded": "MIT",
+      "licenseInfoInFiles": [
+        "MIT"
+      ],
+      "copyrightText": "NOASSERTION"
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-Package-Publisher",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-b803fcb7f17ed923"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-Publisher",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-bc37d034bad56458"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-Publisher",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-06572a96a58dc510"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-Publisher",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-9b9f76394a441ff4"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-Publisher",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-eca12c0a30e25b4b"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-Publisher",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-c693279643b8cd5d"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-Publisher",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-76ed074a9305c040"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-Publisher",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-1f45bb3a082b2dfc"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-Publisher",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-d707f42f25d6ea90"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-Publisher",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-b335630551682c19"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-Publisher",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-047bb5db70d8332b"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-Publisher",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-f6ed156e4bf5c791"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-Publisher",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-6e8c7fdec58c9cb5"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-Publisher",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-ff21b6b9a3a33e9d"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-Publisher",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-9b0de6495e11e0a1"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-Publisher",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-1c763d6aae3a026a"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-Publisher",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-63da683914e6c8d4"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-Publisher",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-68ef0aa444089c18"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-Publisher",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-8d461432b25b3fd6"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-Publisher",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-244b82c24ddd9d5f"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-Publisher",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-887d4c034e6ac727"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-Publisher",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-06ed538ee4b0847a"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-Publisher",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-e10dd1637f342ad7"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-Publisher",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-a671c1703e10fed5"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-Publisher",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-b21d888ced9f06dc"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-Publisher",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-f8bbd5cffda72314"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-Publisher",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-2b667c44f5b9f604"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-Publisher",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-e78acf009191062e"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-Publisher",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-ba116f2bcfb79d24"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-Publisher",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-1b4b962d48628466"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-Publisher",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-cf4772b6a3d8d0bd"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-Publisher",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-8950219db3b6ee5b"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-Publisher",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-d72b7e8b422dad38"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-Publisher",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-bb7c9a09242c7f9d"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-Publisher",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-96131f88be4a0040"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-Publisher",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-696274777d5a9143"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-Publisher",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-e3258fc1bc5f6226"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-Publisher",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-5149f7731ecfad1f"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-Publisher",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-a903a8966ee5525d"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-Publisher",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-File-983bede9100db4ef"
+    }
+  ]
+}
